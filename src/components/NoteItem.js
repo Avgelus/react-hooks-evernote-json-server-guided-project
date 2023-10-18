@@ -1,8 +1,9 @@
 import React, {useState}from "react";
 
-function NoteItem({note}) {
+function NoteItem({note, liftNote}) {
  
   function handleClick() {
+    liftNote(note)
     
   }
   return (

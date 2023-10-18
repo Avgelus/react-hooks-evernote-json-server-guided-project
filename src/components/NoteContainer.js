@@ -5,24 +5,27 @@ import Content from "./Content";
 
 function NoteContainer() {
   const [allNotes, setNotes] = useState([])
-  
+  const [selectedNote, setSelectedNote] = useState(false)
+
   useEffect(() => {
     fetch("http://localhost:3000/notes")
     .then((resp) => resp.json())
     .then((allNotes) => setNotes(allNotes))
   },[])
   
-  function liftNotes(allNotes) {
-
+  function liftNote(note) {
+    setSelectedNote(note)
+    
   }
+ 
  
   
   return (
     <>
       <Search />
       <div className="container">
-        <Sidebar allNotes={allNotes} />
-        <Content liftNotes={liftNotes} />
+        <Sidebar allNotes={allNotes} liftNote={liftNote} />
+        <Content selectedNote={selectedNote} />
       </div>
     </>
   );

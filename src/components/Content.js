@@ -10,15 +10,15 @@ import Instructions from "./Instructions";
           Then complete the rest of your app before attempting to
           refactor to get this Content component to work.
 */
-function Content({liftNotes} ) {
+function Content({selectedNote}) {
   
-  
+  console.log(selectedNote)
 
-  const getContent = ({liftNotes}) => {
-    if (false) {
+  const getContent = () => {
+    if (false) { 
       return <NoteEditor />;
-    } else if (false) {
-      return <NoteViewer />;
+    } else if (selectedNote) {
+      return <NoteViewer note= {selectedNote} />;
     } else {
       return <Instructions />;
     }
