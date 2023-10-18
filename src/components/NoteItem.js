@@ -3,7 +3,7 @@ import React, {useState}from "react";
 function NoteItem({note}) {
  
   function handleClick() {
-    console.log(note)
+    
   }
   return (
     <li onClick={handleClick}>

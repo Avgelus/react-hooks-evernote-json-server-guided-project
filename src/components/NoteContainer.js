@@ -11,7 +11,10 @@ function NoteContainer() {
     .then((resp) => resp.json())
     .then((allNotes) => setNotes(allNotes))
   },[])
+  
+  function liftNotes(allNotes) {
 
+  }
  
   
   return (
@@ -19,7 +22,7 @@ function NoteContainer() {
       <Search />
       <div className="container">
         <Sidebar allNotes={allNotes} />
-        <Content />
+        <Content liftNotes={liftNotes} />
       </div>
     </>
   );
