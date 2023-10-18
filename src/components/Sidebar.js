@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import NoteList from "./NoteList";
 
 function Sidebar({allNotes}) {
+
+  console.log(allNotes)
   return (
     <div className="master-detail-element sidebar">
-      <NoteList allNotes={allNotes}/>
+      <NoteList allNotes={allNotes}  />
       <button>New</button>
     </div>
   );

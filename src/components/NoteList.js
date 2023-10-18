@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import NoteItem from "./NoteItem";
-import Sidebar from "./Sidebar";
+
 
 function NoteList({allNotes}) {
   const renderAllNotes = allNotes.map((note) => 
@@ -14,7 +14,6 @@ function NoteList({allNotes}) {
   return (
     <ul>
       {renderAllNotes}
-      <NoteItem allNotes={allNotes}/>
     </ul>
   );
 }

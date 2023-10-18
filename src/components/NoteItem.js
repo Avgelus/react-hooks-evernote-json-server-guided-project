@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useState}from "react";
 
-function NoteItem({body,title,userId}) {
+function NoteItem({note}) {
+ 
+  function handleClick() {
+    console.log(note)
+  }
   return (
-    <li>
-      <h2>{title}</h2>
-      <p>{body}</p>
+    <li onClick={handleClick}>
+      <h2>{note.title}</h2>
+      <p>{note.body}</p>
     </li>
   );
 }
