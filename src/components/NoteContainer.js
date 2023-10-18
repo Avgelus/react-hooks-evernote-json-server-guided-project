@@ -5,18 +5,20 @@ import Content from "./Content";
 
 function NoteContainer() {
   const [allNotes, setNotes] = useState([])
+  
   useEffect(() => {
     fetch("http://localhost:3000/notes")
     .then((resp) => resp.json())
     .then((allNotes) => setNotes(allNotes))
   },[])
 
-  console.log(allNotes)
+ 
+  
   return (
     <>
       <Search />
       <div className="container">
-        <Sidebar allNotes={allNotes}/>
+        <Sidebar allNotes={allNotes} />
         <Content />
       </div>
     </>
