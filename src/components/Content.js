@@ -11,12 +11,10 @@ import Instructions from "./Instructions";
           refactor to get this Content component to work.
 */
 function Content({selectedNote}) {
-  
-  console.log(selectedNote)
 
   const getContent = () => {
     if (false) { 
-      return <NoteEditor />;
+      return <NoteEditor  />;
     } else if (selectedNote) {
       return <NoteViewer note= {selectedNote} />;
     } else {

@@ -6,7 +6,7 @@ function Sidebar({allNotes, liftNote} ) {
   
   return (
     <div className="master-detail-element sidebar">
-      <NoteList allNotes={allNotes} liftNote={liftNote} />
+      <NoteList allNotes={allNotes} liftNote={liftNote} className="truncated-container"/>
       <button>New</button>
     </div>
   );

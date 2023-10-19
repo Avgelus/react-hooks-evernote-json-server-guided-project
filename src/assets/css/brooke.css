@@ -109,6 +109,11 @@ div.sidebar ul li:hover {
   background-image: linear-gradient(#E6E6E6, #F7F7F7);
   background-repeat: no-repeat;
 }
+.truncated-container {
+  max-height: 3em; 
+  overflow: hidden;
+  position: relative;
+}
 
 
 /* Layout Styles */
