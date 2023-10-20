@@ -1,9 +1,10 @@
 import React, {useState}from "react";
 
-function NoteItem({note}) {
+function NoteItem({note, liftNote}) {
  
   function handleClick() {
-    console.log(note)
+    liftNote(note)
+    
   }
   return (
     <li onClick={handleClick}>

@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import NoteItem from "./NoteItem";
 
 
-function NoteList({allNotes}) {
-  const renderAllNotes = allNotes.map((note) => 
-  <NoteItem 
-  key={note.id} 
-  body={note.body} 
-  title={note.title} 
-  userId={note.userId} 
-  />)
-
+function NoteList({allNotes, liftNote}) {
+  
+  
+  const renderAllNotes = allNotes.map((note) => (
+    <NoteItem 
+      key={note.id} 
+      note={note}
+      liftNote={liftNote}
+    />
+  ))
   return (
     <ul>
       {renderAllNotes}
