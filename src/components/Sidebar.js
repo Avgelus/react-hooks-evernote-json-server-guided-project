@@ -11,13 +11,13 @@ function Sidebar({allNotes, liftNote} ) {
       createNewNote: createNewNote
     }
 
-    fetch("http://localhost:3000/notes"), {
+    fetch("http://localhost:3000/notes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(createNewNote)
-    }.then((resp) =>{
+    }).then((resp) =>{
       if(resp.ok) {
         return resp.json()
       }
